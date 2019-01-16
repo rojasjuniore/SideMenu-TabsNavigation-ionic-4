@@ -1,3 +1,10 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-split-pane>
+  <ion-menu>
+    <ion-content> <app-sidebar-menu></app-sidebar-menu> </ion-content>
+    <!---<ion-footer color="primary">
+      <ion-toolbar> <ion-title>footer</ion-title> </ion-toolbar>
+    </ion-footer>-->
+  </ion-menu>
+
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>

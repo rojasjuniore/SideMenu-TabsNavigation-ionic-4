@@ -1,0 +1,52 @@
+<ion-toolbar class="user-profile" color="primary">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="col-4">
+        <div class="user-avatar"><img src="/assets/icon/favicon.png" /></div>
+      </ion-col>
+      <ion-col padding-top size="col-8">
+        <h2 ion-text class="no-margin bold text-white">JUNIOR ROJAS</h2>
+        <span text-left ion-text color="light">Estudiante</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row no-padding class="other-data">
+      <ion-col no-padding class="column">
+        <ion-button
+          (click)="go('/pages/tabs/account')"
+          icon-left
+          small
+          expand="full"
+          shape="round"
+          color="secondary"
+        >
+          <ion-icon name="contact"></ion-icon> Cuenta</ion-button
+        >
+      </ion-col>
+      <ion-col no-padding class="column">
+        <ion-button
+          icon-left
+          small
+          expand="full"
+          shape="round"
+          color="danger"
+          (click)="logout()"
+        >
+          <ion-icon name="log-out"></ion-icon>
+          Salir</ion-button
+        >
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+<ion-content>
+  <ion-list class="user-list">
+    <ion-item
+      *ngFor="let p of appMenuItems"
+      lines="none"
+      (click)="go(p.router)"
+    >
+      {{ p.title }}
+    </ion-item>
+  </ion-list> </ion-content
+>>
